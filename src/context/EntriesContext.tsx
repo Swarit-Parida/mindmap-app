@@ -1,7 +1,11 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, ReactNode } from "react";
 import { Entry } from "@/types";
-import { entriesService } from "@/services/localBackend";
+import { entriesService as localEntries } from "@/services/localBackend";
+import { firebaseEntriesService } from "@/services/firebaseBackend";
+import { isFirebaseConfigured } from "@/services/firebase";
 import { useAuth } from "./AuthContext";
+
+const entriesService = isFirebaseConfigured ? firebaseEntriesService : localEntries;
 
 interface EntriesContextValue {
   entries: Entry[];

@@ -1,18 +1,16 @@
-// Firebase configuration with safe in-memory + localStorage fallback.
-// To use real Firebase, set the values below (Project Settings → General → Your apps → Web app).
-// Until configured, the app uses a local "demo" backend so you can try it instantly.
-
+// Firebase configuration
 import { initializeApp, type FirebaseApp } from "firebase/app";
 import { getAuth, type Auth } from "firebase/auth";
 import { getFirestore, type Firestore } from "firebase/firestore";
 
 export const firebaseConfig = {
-  apiKey: "",
-  authDomain: "",
-  projectId: "",
-  storageBucket: "",
-  messagingSenderId: "",
-  appId: "",
+  apiKey: "AIzaSyAVoUYtChqxrSBLiWTOk__NvpJV9RpRcXo",
+  authDomain: "emotional-pattern-tracker.firebaseapp.com",
+  projectId: "emotional-pattern-tracker",
+  storageBucket: "emotional-pattern-tracker.firebasestorage.app",
+  messagingSenderId: "838172428913",
+  appId: "1:838172428913:web:1ba7a27da82669927ee9d0",
+  measurementId: "G-4B3YJ86JNV",
 };
 
 export const isFirebaseConfigured = Boolean(
